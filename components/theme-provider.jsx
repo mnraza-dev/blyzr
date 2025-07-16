@@ -2,16 +2,21 @@
 
 import * as React from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { MessagesContext } from "@/context/MessagesContext";
 
 export function ThemeProvider({ children }) {
+  const [messages, setMessages] = useState();
+
   return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="dark"
-      enableSystem
-      disableTransitionOnChange
-    >
-      {children}
-    </NextThemesProvider>
+    <MessagesContext.Provider value={{ messages, setMessages }}>
+      <NextThemesProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem
+        disableTransitionOnChange
+      >
+        {children}
+      </NextThemesProvider>
+    </MessagesContext.Provider>
   );
 }
