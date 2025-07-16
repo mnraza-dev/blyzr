@@ -4,7 +4,7 @@ import React from "react";
 import { ModeToggle } from "./ModeToggle";
 
 import { useTheme } from "next-themes";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 const Navbar = () => {
   const { resolvedTheme } = useTheme();
@@ -25,8 +25,8 @@ const Navbar = () => {
         />
       )}
       <div className="flex gap-4">
-        <Button variant={"outline"}>Getting Started</Button>
-        <Button>Login</Button>
+        <Button variant={"ghost"}>Login</Button>
+        <Button variant={"secondary"}>Getting Started</Button>
         <ModeToggle />
       </div>
     </div>

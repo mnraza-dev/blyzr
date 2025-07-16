@@ -1,9 +1,12 @@
-import { ModeToggle } from '@/components/ModeToggle'
-import Navbar from '@/components/Navbar'
-import React from 'react'
+import Hero from "@/components/custom/Hero";
+import { ModeToggle } from "@/components/custom/ModeToggle";
+import Navbar from "@/components/custom/Navbar";
+import React from "react";
 
 export default function Home() {
   return (
-    <Navbar />
-  )
+    <div className="">
+      <Hero />
+    </div>
+  );
 }

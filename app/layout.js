@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/custom/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,7 +17,10 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.className} antialiased`} suppressHydrationWarning>
       <body>
         <ThemeProvider>
-          {children}
+          <Navbar/>
+         <main className="mx-8 px-2  py-4 max-w-8xl">
+         {children}
+         </main>
         </ThemeProvider>
       </body>
     </html>
