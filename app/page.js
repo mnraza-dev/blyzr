@@ -1,12 +1,9 @@
 import { ModeToggle } from '@/components/ModeToggle'
-import { Button } from '@/components/ui/button'
+import Navbar from '@/components/Navbar'
 import React from 'react'
 
 export default function Home() {
   return (
-    <div>
-      <ModeToggle/>
-      {/* <Button variant={"outline"}>Hi There</Button> */}
-    </div>
+    <Navbar />
   )
 }
