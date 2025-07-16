@@ -17,7 +17,10 @@ const Hero = () => {
             className="outline-none bg-transparent w-full h-32 max-h-56  resize"
             placeholder={lookup.INPUT_PLACEHOLDER}
           />
-          <ArrowRight className="w-8 h-8 bg-blue-800 rounded-md p-2 " />
+          {userInput && (
+            <ArrowRight onClick={()=>{ console.log("clicked");
+            }} className="w-8 h-8 cursor-pointer bg-blue-800 rounded-md p-2 " />
+          )}
         </div>
         <div>
           <Link className="h-5 w-5" />
