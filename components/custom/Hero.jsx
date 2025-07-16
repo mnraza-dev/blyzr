@@ -18,13 +18,24 @@ const Hero = () => {
             placeholder={lookup.INPUT_PLACEHOLDER}
           />
           {userInput && (
-            <ArrowRight onClick={()=>{ console.log("clicked");
-            }} className="w-8 h-8 cursor-pointer bg-blue-800 rounded-md p-2 " />
+            <ArrowRight
+              onClick={() => {
+                console.log("clicked");
+              }}
+              className="w-8 h-8 cursor-pointer bg-blue-800 rounded-md p-2 "
+            />
           )}
         </div>
         <div>
           <Link className="h-5 w-5" />
         </div>
+      </div>
+      <div className="flex justify-center items-center flex-wrap gap-4 mt-4 max-w-4xl mx-auto">
+        {lookup.SUGGESTIONS.map((suggestion) => (
+          <div className=" cursor-pointer border border-gray-800 text-xs rounded-2xl px-4 py-1 hover:border-gray-700 duration-300 ">
+            {suggestion}
+          </div>
+        ))}
       </div>
     </div>
   );
